@@ -9,13 +9,13 @@ const buttonDecrement = document.querySelector('[data-action="decrement"]');
 buttonIncrement.addEventListener("click", () => {
   counterValue += 1;
   document.getElementById("value").textContent = counterValue;
-  // console.log(buttonIncrement);
+  console.log(buttonIncrement);
 });
 
 buttonDecrement.addEventListener("click", () => {
   counterValue -= 1;
   document.getElementById("value").textContent = counterValue;
-  // console.log(buttonDecrement);
+  console.log(buttonDecrement);
 });
 
 
