@@ -1,7 +1,6 @@
 "use strict";
 
-
-const counterValue = 0;
+let counterValue = 0;
 const valueEl = document.querySelector("#value");
 
 const buttonIncrement = document.querySelector('[data-action="increment"]');
@@ -10,15 +9,13 @@ const buttonDecrement = document.querySelector('[data-action="decrement"]');
 buttonIncrement.addEventListener("click", () => {
   counterValue += 1;
   document.getElementById("value").textContent = counterValue;
-
-  console.log(buttonIncrement);
+  // console.log(buttonIncrement);
 });
 
 buttonDecrement.addEventListener("click", () => {
   counterValue -= 1;
   document.getElementById("value").textContent = counterValue;
-
-  console.log(buttonDecrement);
+  // console.log(buttonDecrement);
 });
 
 
