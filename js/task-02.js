@@ -11,14 +11,18 @@ const ingredients = [
 
 const ulEl = document.querySelector("#ingredients");
 
+const itemArray = []
+
 ingredients.forEach((ingredient) => {
   const itemEl = document.createElement("li");
   itemEl.classList.add("item");
   itemEl.textContent = ingredient;
-  console.log(itemEl);
+  itemArray.push(itemEl)
 
-  ulEl.append(itemEl);
 });
+
+ulEl.append(...itemArray);
+ 
 
 // classList - зберігається об'єкт з методами для роботи з класами елемента.
 //   textContent -  повертає текстовий контент всередині елемента.

@@ -19,14 +19,18 @@ const images = [
 
 const ulEl = document.querySelector('.gallery');
 
-images.forEach(image => {
-  ulEl.insertAdjacentHTML(
-    'afterbegin',
-    `<li><img src = "${image.url}" alt = "${image.alt}"  width = 280 height = 200></li>`
-  );
-});
+const markup = images.map(image => `<li><img src = "${image.url}" alt = "${image.alt}"  width = 280 height = 200></li>`).join("");
+
+ulEl.insertAdjacentHTML('afterbegin', markup);
 
 console.log(ulEl)
+
+// ulEl.style.display = 'flex';
+// ulEl.style.listStyle = 'none';
+// ulEl.style.justifyContent = 'space-evenly';
+// ulEl.style.marginTop = '100px';
+// ulEl.style.gap = '15px';
+
 
 
 // insertAdjacentHTML - Сучасний метод для додавання рядка з HTML - тегами перед, після або всередину елемента.
